@@ -1,0 +1,39 @@
+//Solicita al usuario el capital y el tiempo, y calcula el interés simple.
+//La tasa de interés se encuentra precargada en el ejercicio y debe
+//ser mostrada al usuario.
+//Fórmula: interés = capital * tasa * tiempo
+
+
+
+SubProceso Inter(c,ta,ti)
+	
+	//Escribe leyenda informando el interes
+	Escribir "El Interes que recibira es de $:",c*ta*ti
+	
+FinSubProceso
+
+
+Algoritmo Interes
+	
+	
+	
+	Definir capital, tasa Como Real // defino el capital y la tasa como numero real
+	Definir tiempo Como Entero		// defino el tiempo como numero Entero
+	
+	tasa= 0.2
+	
+	
+	//Escribe leyenda solicitando que el usr ingrese el capital
+	Escribir Sin Saltar"Por favor ingrese el monto a invertir (capital): "
+	Leer capital //Lee capital
+	
+	//Escribe leyenda solicitando que el usr ingrese los dias que invertira
+	Escribir Sin Saltar"Ingrese el tiempo (días) en que invertira el capital: "
+	Leer tiempo  //Lee tiempo
+	
+	//Escribe leyenda informando la tasa de ineteres
+	Escribir "La tasa de interes es del ",tasa," %"
+	
+	Inter(capital,tasa,tiempo)
+	
+FinAlgoritmo

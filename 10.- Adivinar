@@ -1,0 +1,52 @@
+//Genera un número aleatorio entre 1 y 25 y permite al usuario
+//adivinarlo. Indica si su intento es demasiado alto, demasiado bajo
+//	o correcto. (Usar la función Azar)
+//verifica si el valor introducido por el usuario es igual, mayor o menor al de azar
+
+SubProceso resultado(n,a) //n para numero y a para valor de azar
+	
+	Si n>a Entonces // verifica si el numerro del azar es mayor al ingresado por el usr
+		
+		
+		Escribir Sin Saltar"El valor es demasiado bajo"
+		
+	SiNo
+		Si n<a Entonces // verifica si el numerro del azar es menor al ingresado por el usr
+			
+			Escribir Sin Saltar"El valor es demasiado alto"
+			
+		SiNo
+			Escribir Sin Saltar"El valor es CORRECTO !!"
+			
+		FinSi
+	FinSi
+	
+FinSubProceso
+
+
+Algoritmo Adivinar
+	
+	
+	Definir num,adivina Como Entero
+	
+	num=azar(25) // asigna a num un numero al azar de 0 a 25
+	
+	Escribir "El valor al azar es: ",num //muestra num para que el profesor verifique el numero 
+	
+	adivina= 0
+	//Escribe la leyenda para que el usr ingrese el numero adivina
+	
+	//valida que el valor sea entre 1 y 25
+	Mientras adivina<=0 o adivina>25 Hacer
+		
+		Escribir Sin Saltar"Adivine el valor del 1 al 25: "
+		
+		Leer adivina //Lee el numero del usr
+				
+	
+	FinMientras
+	
+//llama al subproceso resultado para que verifique si es alto, bajo o adivino
+resultado(num, adivina)
+FinAlgoritmo
+

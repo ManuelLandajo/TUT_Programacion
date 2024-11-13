@@ -1,0 +1,27 @@
+//Genera la tabla de multiplicar (hasta n x 20) de un número ingresado por el usuario.
+
+SubProceso Multiplicar(num)
+	
+	Para i Desde 1 Hasta 20 Hacer 
+		
+		//Muestra la con el nro ingresado por el usr x i y luego multiplica n*i
+		Escribir,num," x ",i," = ",num*i
+		
+	FinPara
+	
+FinSubProceso
+
+
+Algoritmo Tabla_de_multiplicar
+	
+	Definir n Como Entero //Defino n Como Entero
+	
+	//Muestra la leyenda para que el usr ingrese el valor que quiere multiplicar
+	Escribir Sin Saltar"Ingrese el valor a multiplicar por 20: "
+	Leer n //Lee el numero que quiere multiplicar el usuario
+	
+	//Se llama al subproceso Multiplicar para que realice todos los calculos
+	Multiplicar(n)
+	
+FinAlgoritmo
+

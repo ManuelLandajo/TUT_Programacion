@@ -1,0 +1,64 @@
+//	Este ejercicio debe solicitar dos números y la operación que desea
+//	realizar (suma, resta, multiplicación o división). Luego, calculará y
+//	mostrará el resultado correspondiente según la operación
+//	seleccionada.
+
+Funcion  num=LeerNumero(num)
+	
+	Escribir "Introduce el número: "  
+    Leer num 
+	
+FinFuncion
+
+
+Algoritmo  Calculadora  
+
+    Definir num1, num2, resultado Como Real  
+    Definir operacion Como Caracter  
+	
+    // Solicitar el primer número  
+    Escribir "PRIMER NUMERO"  
+    num1=LeerNumero(num1)				// Llamar a funcion LeerNumero
+		
+	
+    // Solicitar el segundo número  
+	Escribir "SEGUNDO NUMERO"  
+    num2=LeerNumero(num2)				// Llamar a funcion LeerNumero
+	
+    // Mostrar las operaciones disponibles  
+    Escribir "Que operaciones desea hacer: (+) (-) (*) (/)"  
+    
+    // Solicitar la operación  
+    Escribir "Elige la operación : "  
+    Leer operacion  
+	
+    // Realizar el cálculo según la operación seleccionada  
+    Segun operacion Hacer  
+		
+        "+"://Operacion Suma
+            resultado =  num1 + num2  
+            Escribir "El resultado de la suma es: ", resultado  
+			
+			
+		"-"://Opcion Resta
+            resultado = num1 - num2  
+            Escribir "El resultado de la resta es: ", resultado  
+			
+		"*"://Opcion Multiplicacion
+            resultado = num1 * num2  
+            Escribir "El resultado de la multiplicación es: ", resultado  
+			
+		"/"://Opcion Division  
+            Si num2 <> 0 Entonces  //Si num2 es distinto de 0
+                resultado <- num1 / num2  
+                Escribir "El resultado de la división es: ", resultado  
+				
+			Sino  //Si num2 es igual a 0
+                Escribir "Error: División por cero"  
+            FinSi  
+			
+        De Otro Modo:  //Si se seleccionó una opcion distinta a + - * /
+            Escribir "Opción no válida"  
+    Fin Segun  
+	
+FinAlgoritmo

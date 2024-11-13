@@ -1,0 +1,44 @@
+//El ejercicio debe pedir que se ingrese una cadena de texto o frase
+//y la retorna invertida.
+
+
+SubProceso Invert(frase,cont)
+	
+	//Repetir desde i=0 hasta la longitud de la frase
+	Para i Desde 0 Hasta Longitud(frase) Hacer 				
+		
+		//Muestro letra de la frase desde la ultima hasta la primera
+		Escribir Sin Saltar Subcadena(frase, cont, cont) 	
+		
+		// Descuento 1 al contador para que pueda mostrar la letra anterior
+		cont= cont-1									
+		
+	FinPara
+	
+FinSubProceso
+
+
+
+Algoritmo Invertir
+	
+	// Defino frase para almacenar la palabra que ingresará el usuario
+	Definir frase Como Caracter  
+	// Defino contador para contar los caracteres de la palabra
+    Definir contador Como Entero  								
+    
+	//Solicito ingreso de una palabra o frase
+	Escribir sin saltar "Ingrese una palabra o frase:" 
+	//Leo la frase que ingresa el usuario
+    Leer frase  												
+	
+	//Le asigno a contador la longitud de la frase cargada
+	contador=Longitud(frase)
+	
+	
+	//Muestro la leyenda "La palabra o frase INVERTIDA es: "
+	Escribir Sin Saltar "La palabra o frase INVERTIDA es: "	
+
+	Invert(frase,contador)
+	
+	
+FinAlgoritmo

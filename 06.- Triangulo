@@ -1,0 +1,48 @@
+//Escribe un programa que calcule el área de un triángulo dados su
+//base y su altura. (Datos ingresados por el usuario)
+
+Funcion area = AreaTriangulo(base,altura)	//Funcion para calcular el area del triangulo
+	area=(base*altura)/2
+FinFuncion
+
+
+
+Funcion base=LeerBase(base) //Funcion para leer base del triangulo
+	
+	//Muestra leyenda pidiendo el valor de la base
+	
+	Escribir Sin Saltar "Ingrese la base del triangulo: "
+	Leer base //Lee valor de base	
+FinFuncion
+
+
+
+
+Funcion altura=LeerAltura(altura) //Funcion para leer altura del triangulo
+	//Muestra leyenda pidiendo el valor de la altura
+	Escribir Sin Saltar "Ingrese la altura del triangulo: "
+	Leer altura //Lee valor de altura
+FinFuncion
+
+
+
+SubProceso MostrarArea(area)
+	//Muestra leyendo del area y calcula el area del triangulo
+	Escribir "El area del triangulo es: ",area
+	
+FinSubProceso
+
+
+
+
+Algoritmo Triangulo
+	
+	Definir area,base,altura Como Real //Defino area y altura como valores reales
+	
+	base=LeerBase(base)					//llamo a la funcion LeerBase
+	altura=LeerAltura(altura)			//llamo a la funcion LeerAltura
+	area= AreaTriangulo(base,altura) 	//llamo a la funcion AreaTriangulo
+	MostrarArea(area)					//Llamo al subproceso MostrarArea
+
+	
+FinAlgoritmo

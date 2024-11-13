@@ -1,0 +1,106 @@
+//Crea dos matrices y calcula la suma de ambas, mostrando el resultado.
+
+//Esta funcion Carga los datos de la matriz.
+Funcion CargaMatriz(Matriz,m,n)
+	
+	Definir i,j Como Entero
+	
+	//Para i=1 hasta m (cantidad de filas) Carga la matriz con valores
+	Para i=1 Hasta m Con Paso 1  Hacer 
+		
+		//Para j=1 hasta n (cantidad de columnas) hacer
+		Para j=1 hasta n Con Paso 1 Hacer 
+			
+			//Muestra leyenda MatrizA mxn 
+			Escribir Sin Saltar"Ingrese los valores para la Matriz ",m,"x",n,"[",i,"][",j,"]" 
+			
+			//Lee el valor de la fila y columna de matriz
+			Leer Matriz[i,j] 
+			
+		FinPara
+		
+	FinPara
+	
+	
+FinFuncion
+
+//Con este subproceso se muestra el contenido de la matriz
+SubProceso MostrarMatriz(Matriz,m,n)
+	
+	Para i=1 Con Paso 1 Hasta m Hacer
+		
+		Para j=1 Con Paso 1 Hasta n Hacer
+			
+			Escribir Sin Saltar matriz[i,j], " "
+			
+		FinPara
+		
+		Escribir ""
+		
+	FinPara
+FinSubProceso
+
+//Este Subproceso muestra la el valor de la "matriz resultante" de la suma de 2 matrices
+SubProceso MostrarSumaMatrices(matriz1,matriz2,m,n)
+	
+	Definir i,j Como Entero
+
+	Escribir "La matriz resultante de la suma de la Matriz A y Matriz B es:"
+	Para i=1 Hasta m Hacer //Para i=1 hasta m (cantidad de filas) hacer
+	
+		
+		Para j=1 Hasta n Hacer  
+			
+			//Muestra la suma de cada valor de la matriz A y B		
+			Escribir Sin Saltar ,matriz1[i,j] + matriz2[i,j], " " //Muestra Matriz C y hace la suma de ambas matrices 
+			
+		FinPara
+		Escribir ""
+	FinPara
+	
+FinSubProceso
+
+
+Algoritmo SumaDeMatrices
+	
+	
+	Definir m, n, i, j, matrizA,matrizB Como Entero //Defino Como Entero a M(filas), i (fila) j(columna) N(Columnas), matrizA y matrizB
+	
+	
+	Escribir "Definir de cuanto sera la matriz (Matriz M x N)" //Muestro texto para que el usr cargue de cuanto sera la matriz (M x N)
+	Escribir Sin Saltar"M: " //Lee la cantidad de filas que tendra cada matriz
+	Leer m
+	Escribir Sin Saltar"N: " //Lee la cantidad de columnas que tendra cada matriz
+	Leer n
+	
+	Dimension matrizA[m,n]  //Dimensiono la matrizA(fila,columnas)
+	Dimension matrizB[m,n]  //Dimensiono la matrizB(fila,columnas)
+
+	//Cargo los valores de la Matriz A
+	Escribir "Ingrese los valores para la Matriz A ",m,"x",n
+	CargaMatriz(matrizA,m,n)
+	
+	Escribir " "
+	
+	//Cargo los valores de la Matriz B
+	Escribir "Ingrese los valores para la Matriz B ",m,"x",n
+	CargaMatriz(matrizB,m,n)
+	
+	Escribir " "
+	//Muestra la Matriz A
+	Escribir "Matriz A "
+	MostrarMatriz(matrizA,m,n)
+	
+	Escribir " "
+	
+	//Muestra la Matriz B
+	Escribir "Matriz B "
+	MostrarMatriz(matrizB,m,n)
+	
+	Escribir " "
+	
+	//Muestra la Matriz con la suma de ambas matrices
+	MostrarSumaMatrices(matrizA,matrizB,m,n)
+
+	
+FinAlgoritmo

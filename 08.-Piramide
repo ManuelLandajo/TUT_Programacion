@@ -1,0 +1,124 @@
+//El usuario debe ingresar un número y genera una pirámide de
+//números hasta llegar al número. Cada número es una fila.
+
+
+//Para dejar con mejor imagen visual al triangulo se deja mas o menos espacios entre nros
+// dado que del 10 en adelante queda muy mal el triangulo
+
+
+
+// Suproceso para mostras el triangulo con 1 dígito, dejando 1 espacios entre cada uno
+SubProceso numMenor10(n)
+	
+	Definir fila,espacio Como Entero
+	
+	
+	// Imprimir el triángulo  
+	
+	Para fila = 1 Hasta n Hacer  
+		
+		
+		// Imprimir espacios en blanco para centrar el triángulo  
+		Para j = fila Hasta n Con Paso 1 Hacer
+			
+			Escribir sin saltar " " //Escribe  de a 1 espacio antes de escribir el numero
+			
+		Fin Para  
+		
+		// Imprimir números en la fila actual  
+		Para espacio = 1 Hasta fila Hacer  
+			
+			Escribir sin saltar fila, " "//Escribe el numero de  fila y deja 1 espacio
+			
+		Fin Para  
+		
+		
+		// Salto de línea después de cada fila  
+		Escribir ""  
+	Fin Para  
+	
+FinSubProceso
+
+// Suproceso para mostras el triangulo con mas de 2 dígitos, dejando 2 espacios entre cada uno
+SubProceso numMayor10(n)
+	
+	
+	Definir fila,espacio Como Entero
+	
+	Para fila = 1 Hasta n Hacer  
+		
+		Si fila <10 Entonces
+			
+			
+			// Imprimir espacios en blanco para centrar el triángulo  
+			Para j = fila Hasta n Con Paso 1 Hacer
+				
+				Escribir sin saltar "  "//deja espacios antes de escribir el numero
+				
+			Fin Para  
+			
+			// Imprimir números en la fila actual  
+			Para espacio = 1 Hasta fila Hacer  
+				
+				Escribir sin saltar fila, "  "//escribe el nro de fila y deja espacios antes de escribir el numero
+				
+			Fin Para  
+			
+			
+			// Salto de línea después de cada fila  
+			Escribir ""  
+			
+			
+		SiNo
+			
+			Para j = fila Hasta n Con Paso 1 Hacer
+				
+				Escribir sin saltar "  " //deja espacios antes de escribir el numero
+				
+			Fin Para  
+			
+			// Imprimir números en la fila actual  
+			Para espacio = 1 Hasta fila Hacer  
+				
+				Escribir sin saltar fila, " " //Escribe  el numero de fila pero deja menos espacio con el nro siguiente
+				
+			Fin Para  
+			
+			
+			// Salto de línea después de cada fila  
+			Escribir ""  
+			
+			
+			
+			
+		FinSi
+		
+	FinPara
+	
+FinSubProceso
+
+
+Algoritmo PiramideDeNumeros
+	
+	Definir num Como Entero  // Defino como Entero a num (valor a ingresar por el usr) fila(de la piramide) y espacio (separacion entre numeros
+    
+	
+    // Solicitar al usuario que ingrese un número  
+    Escribir "Ingrese un número:"  
+    Leer num //Lee el numero 
+	
+	Si num<10 Entonces //verifico si el valor es menor a 10 dado que dejare 1 espacio entre los numeros de cada fila
+		
+		// Imprimir el triángulo 
+		numMenor10(num)
+		
+		
+	SiNo
+		// Imprimir el triángulo 
+		numMayor10(num)
+		
+	FinSi
+	
+FinProceso
+
+	

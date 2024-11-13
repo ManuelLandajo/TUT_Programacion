@@ -1,0 +1,46 @@
+//Este ejercicio debe solicitar que se ingrese una palabra o frase.
+//Para que sea analizada y retorne cuántas vocales (tanto
+//mayúsculas como minúsculas) contiene.
+	
+Funcion cont=ContadorVocales(palabras)
+	
+	//Repetir desde i=0 hasta la lonhitud de la frase
+	Para i Desde 0 Hasta Longitud(palabras) Hacer 				
+		
+		//Condicional si donde lea la letra "i" de la frase y si es vocal pasa al Entonces
+		Si Subcadena(palabras, i, i) = "a" O Subcadena(palabras, i, i) = "e" O Subcadena(palabras, i, i) = "i" O Subcadena(palabras, i, i) = "o" O Subcadena(palabras, i, i) = "u" O Subcadena(palabras, i, i) = "A" O Subcadena(palabras, i, i) = "E" O Subcadena(palabras, i, i) = "I" O Subcadena(palabras, i, i) = "O" O Subcadena(palabras, i, i) = "U" Entonces
+			
+			// Sumo al contador +1  si es vocal (si no lo es no suma
+			cont= cont +1								
+			
+		Fin Si
+		
+		
+	FinPara
+FinFuncion
+
+
+Algoritmo Contador_Vocales
+	
+	// Defino frase para almacenar la palabra que ingresará el usuario
+	Definir frase Como Caracter 
+	// Defino contador para contar los caracteres de la palabra
+    Definir contador Como Entero  							
+	
+	//Inicializo  contador en 0
+	contador = 0												
+    
+	//Solicito ingreso de una palabra o frase
+	Escribir "Ingrese una palabra o frase:"  
+	
+	//Leo la frase que ingresa el usuario
+    Leer frase  												
+	
+	//En contador guardo el valor que arroja la funcion ContadorVocales
+	contador= ContadorVocales(frase)
+	
+	
+	// Muestro leyenda e infomro la cantidad de vocales de la frase o palabra
+    Escribir "La cantidad de vocales es: ", contador  			
+
+FinAlgoritmo

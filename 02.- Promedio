@@ -1,0 +1,70 @@
+//Este ejercicio debe permitir ingresar una cantidad indefinida de
+//números y luego calcular el promedio. El programa debe finalizar
+//cuando el usuario ingrese un valor negativo, el mismo no se debe
+//incluir en el promedio.
+
+
+//Funcion para la carga de todos los numeros que se van a promediar
+Funcion num=IngresoNumero(num) 
+	
+	//Defino variables
+	Definir SioNo Como Caracter
+	Definir mum Como Real
+	
+	//Escribe mensaje para leer el numero
+	Escribir "Ingresa un número (negativo para finalizar): "  
+	Leer num  // Lee el numero
+	
+	//si num = o puede ser por haber apretado el enter
+	Si num=0 Entonces
+		
+		//pregunta si esta seguro de cargar el 0 como valor
+		Escribir "Esta seguro de ingresar 0 (Si esta mal presione N o n):"	
+		
+		// lee el valor
+		Leer SioNo												
+		
+		//Si el valor 0 fue sin querer permite reeingresar valor
+		Si SioNo ="N" o SioNo="n" Entonces						
+			Escribir "Reescriba el numero:"
+			Leer num
+		FinSi
+	FinSi
+	
+FinFuncion
+
+
+Algoritmo  Promedio
+	
+    Definir suma, contador, num1 Como Real  
+	
+    // Inicializar variables  
+    suma = 0  
+    contador = 0  
+    num1 = 0  
+	
+    // Ingresar números  
+    Mientras  num1 >=0 // Mientras num1 >= 0
+        
+        num1=IngresoNumero(num1)
+		
+        // Si el número es negativo, se termina el ingreso  
+        Si num1 >= 0 Entonces  //Condicional num1 >=0
+            suma = suma + num1 // A la variable suma se le suma el valor de num1
+            contador = contador + 1  // A la variable contador se le incrementa 1
+        Fin Si  
+    FinMientras
+	
+	
+	
+    // Calcular y mostrar el promedio  
+    Si contador > 0 Entonces  //Si el contador es mayor a 0
+        Escribir "La suma de los números ingresados es: ", suma  //Escribe mensaje con la suma de los nros ingresados y muestra variuble suma
+        Escribir "Cantidad de números ingresados: ", contador  //Escribe mensaje con la cantidad de nros ingresados y muestra variuble contador
+        Escribir "El promedio es: ", suma / contador  //Escribe mensaje con el promedio y muestra el calculla suma/contador
+    Sino  //Si el contador es = 0
+        Escribir "No se ingresaron números positivos para calcular el promedio."  
+    Fin Si  
+	
+FinAlgoritmo
+
